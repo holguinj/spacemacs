@@ -16,3 +16,9 @@
 [submodule "spacemacs/extensions/spray"]
 	path = spacemacs/extensions/spray
 	url = https://github.com/syl20bnr/spray
+[submodule "spacemacs/extensions/yasnippet-snippets"]
+	path = spacemacs/extensions/yasnippet-snippets
+	url = http://github.com/AndreaCrotti/yasnippet-snippets.git
+[submodule "outside-configs/chrisbarrett"]
+	path = outside-configs/chrisbarrett
+	url = https://github.com/chrisbarrett/.emacs.d
