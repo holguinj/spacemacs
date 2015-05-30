@@ -16,20 +16,17 @@
      ;; Example of useful layers you may want to use right away
      ;; Uncomment a layer name and press C-c C-c to install it
      ;; --------------------------------------------------------
-     auto-completion
      abclj
-     ;; punch-evil
-     evil-monkey
+     auto-completion
      better-defaults
+     clojure
+     evil-monkey
      (git :variables git-gutter-use-fringe t)
+     justin
      markdown
      org
-     syntax-checking
-     ;; JHH
-     ;; cb-core
-     ;; cb-proof
-     clojure
      puppet
+     syntax-checking
      themes-megapack
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -66,11 +63,11 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(molokai
+   dotspacemacs-themes '(;molokai
+                         monokai
                          solarized-light
                          solarized-dark
                          leuven
-                         monokai
                          zenburn)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -249,6 +246,12 @@ layers configuration."
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(ring-bell-function (quote ignore) t)
+ '(safe-local-variable-values
+   (quote
+    ((eval when
+           (fboundp
+            (quote rainbow-mode))
+           (rainbow-mode 1)))))
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496"))
@@ -257,6 +260,4 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "SteelBlue1")))))
+ '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))

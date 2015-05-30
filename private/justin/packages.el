@@ -10,6 +10,8 @@
 ;;
 ;;; License: GPLv3
 
+(load "~/.emacs.d/private/justin/monokai-theme.el")
+
 (defvar justin-packages
   '(
     ;; package justins go here
