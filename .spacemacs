@@ -12,21 +12,24 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     ;; --------------------------------------------------------
+     ;; ----------------------------------------------------------
      ;; Example of useful layers you may want to use right away
-     ;; Uncomment a layer name and press C-c C-c to install it
-     ;; --------------------------------------------------------
+     ;; Uncomment a layer name and do <leader> f e R to install it
+     ;; ----------------------------------------------------------
      abclj
      auto-completion
      better-defaults
      clojure
+     emacs-lisp
      evil-monkey
+     extra-langs
      (git :variables git-gutter-use-fringe t)
      justin
      markdown
      org
      puppet
      syntax-checking
+     spotify
      themes-megapack
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
