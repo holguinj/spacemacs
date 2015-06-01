@@ -148,6 +148,10 @@ before layers configuration."
 
 ;; M-u to toggle transparency
 (eval-when-compile (require 'cl))
+
+(defun configure-clojure ()
+  (setq clojure-enable-fancify-symbols t))
+
 (defun toggle-transparency ()
   (interactive)
   (if (/=
@@ -213,9 +217,11 @@ layers configuration."
 
   (global-set-key (kbd "M-u") 'toggle-transparency)
 
+  ;; Lazy config
   (activate-linum)
   (extend-monokai)
   (sensible-splits)
+  (configure-clojure)
   (refine-scrolling))
 
 ;; Do not write anything past this comment. This is where Emacs will
