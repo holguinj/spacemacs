@@ -142,9 +142,7 @@ before layers configuration."
    dotspacemacs-default-package-repository nil)
    ;; User initialization goes here
   (setq-default git-enable-github-support t)
-  (setq magit-repo-dirs `("~/src/"))
-
-   )
+  (setq magit-repo-dirs `("~/src/")))
 
 ;; M-u to toggle transparency
 (eval-when-compile (require 'cl))
@@ -271,4 +269,5 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(evil-search-highlight-persist-highlight-face ((t (:inherit region :background "dark slate gray"))))
  '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))
