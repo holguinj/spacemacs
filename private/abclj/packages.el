@@ -124,12 +124,12 @@ which require an initialization must be listed explicitly in the list.")
   (evil-leader/set-key-for-mode 'clojure-mode "s d" (lambda (&args) (interactive "P") (insert "#spy/d ^{:marker \"\"} ") (backward-char 3)))
   (evil-leader/set-key-for-mode 'clojure-mode "s t" (lambda (&args) (interactive "P") (insert "#spy/t ")))
 
-  (local-unset-key "M-.")
-  (local-unset-key "M-,")
-  (fill-keymap evil-normal-state-local-map
-               "M-." 'cider-jump-to-var
-               "M-," 'cider-jump-back
-               "C-c h" 'helm-clojure-headlines)
+  ;; (local-unset-key "M-.")
+  ;; (local-unset-key "M-,")
+  ;; (fill-keymap evil-normal-state-local-map
+  ;;              "M-." 'cider-jump-to-var
+  ;;              "M-," 'cider-jump-back
+  ;;              "C-c h" 'helm-clojure-headlines)
   ;; (define-key evil-normal-state-local-map (kbd "M-.") 'cider-jump-to-var)
   (define-key evil-insert-state-local-map (kbd "RET") 'paredit-newline)
 
