@@ -24,6 +24,7 @@
      evil-monkey
      extra-langs
      (git :variables git-gutter-use-fringe t)
+     idris
      justin
      markdown
      org
@@ -269,5 +270,8 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(evil-search-highlight-persist-highlight-face ((t (:inherit region :background "dark slate gray"))))
+ '(font-lock-doc-face ((t (:foreground "khaki1"))))
  '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))
