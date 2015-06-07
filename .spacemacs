@@ -17,6 +17,7 @@
      ;; Uncomment a layer name and do <leader> f e R to install it
      ;; ----------------------------------------------------------
      abclj
+     agda
      auto-completion
      better-defaults
      clojure
@@ -270,8 +271,6 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(evil-search-highlight-persist-highlight-face ((t (:inherit region :background "dark slate gray"))))
- '(font-lock-doc-face ((t (:foreground "khaki1"))))
+ '(font-lock-warning-face ((t (:foreground "dark red" :underline t :slant italic :weight bold))))
  '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))
