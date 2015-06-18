@@ -25,10 +25,12 @@
      evil-monkey
      extra-langs
      (git :variables git-gutter-use-fringe t)
+     haskell
      idris
      justin
      markdown
      org
+     osx
      puppet
      syntax-checking
      spotify
@@ -143,6 +145,7 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil)
    ;; User initialization goes here
+  (add-to-list 'exec-path "~/.cabal/bin/")
   (setq-default git-enable-github-support t)
   (setq magit-repo-dirs `("~/src/")))
 
