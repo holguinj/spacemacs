@@ -19,6 +19,3 @@
 [submodule "spacemacs/extensions/yasnippet-snippets"]
 	path = spacemacs/extensions/yasnippet-snippets
 	url = http://github.com/AndreaCrotti/yasnippet-snippets.git
-[submodule "outside-configs/chrisbarrett"]
-	path = outside-configs/chrisbarrett
-	url = https://github.com/chrisbarrett/.emacs.d
