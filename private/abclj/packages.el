@@ -170,6 +170,7 @@ which require an initialization must be listed explicitly in the list.")
 
 
 (add-hook 'clojure-mode-hook 'always-be-clojing-mode)
+(add-hook 'clojure-mode-hook #'enable-paredit-mode)
 
 (provide 'always-be-clojing-mode)
 ;; For each package, define a function abclj/init-<package-abclj>

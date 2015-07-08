@@ -20,6 +20,7 @@
      agda
      auto-completion
      better-defaults
+     c-c++
      clojure
      emacs-lisp
      evil-monkey
@@ -29,9 +30,11 @@
      idris
      justin
      markdown
-     org
+     (org :variables org-enable-github-support t)
+     org-babel-clojure
      osx
      puppet
+     semantic
      syntax-checking
      spotify
      themes-megapack
@@ -149,12 +152,28 @@ before layers configuration."
   (setq-default git-enable-github-support t)
   (setq magit-repo-dirs `("~/src/")))
 
-;; M-u to toggle transparency
 (eval-when-compile (require 'cl))
 
-(defun configure-clojure ()
-  (setq clojure-enable-fancify-symbols t))
+(defun configure-org-babel ()
+  (setq org-src-fontify-natively t)
+  (setq org-src-tab-acts-natively t)
+  (setq org-confirm-babel-evaluate nil)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '(
+     (emacs-lisp . t)
+     (clojure . t)
+     (python . t)
+     (haskell . t)
+     (ruby . t)
+     (C . t)
+     )))
 
+(defun configure-clojure ()
+  (setq clojure-enable-fancify-symbols t)
+  (put 'prop/for-all 'clojure-backtracking-indent '(4 (2))))
+
+;; M-u to toggle transparency
 (defun toggle-transparency ()
   (interactive)
   (if (/=
@@ -225,6 +244,7 @@ layers configuration."
   (extend-monokai)
   (sensible-splits)
   (configure-clojure)
+  (configure-org-babel)
   (refine-scrolling))
 
 ;; Do not write anything past this comment. This is where Emacs will
