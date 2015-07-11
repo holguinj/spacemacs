@@ -239,6 +239,10 @@ layers configuration."
 
   (global-set-key (kbd "M-u") 'toggle-transparency)
 
+  ;; Use tab to enter normal mode
+  (define-key evil-insert-state-map (kbd "TAB") 'evil-normal-state)
+  (define-key evil-visual-state-map (kbd "TAB") 'evil-normal-state)
+
   ;; Lazy config
   (activate-linum)
   (extend-monokai)
@@ -295,5 +299,4 @@ layers configuration."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-search-highlight-persist-highlight-face ((t (:inherit region :background "dark slate gray"))))
- '(font-lock-warning-face ((t (:foreground "dark red" :underline t :slant italic :weight bold))))
  '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))
