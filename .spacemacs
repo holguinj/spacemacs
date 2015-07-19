@@ -20,7 +20,11 @@
      agda
      auto-completion
      better-defaults
-     c-c++
+     (c-c++ :variables
+            c-c++-enable-clang-support t
+            c-c++-default-mode-for-headers 'c++-mode)
+     (colors :variables
+             colors-enable-nyan-cat-progress-bar t)
      clojure
      emacs-lisp
      evil-monkey
@@ -38,6 +42,7 @@
      syntax-checking
      spotify
      themes-megapack
+     ycmd
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -154,6 +159,10 @@ before layers configuration."
 
 (eval-when-compile (require 'cl))
 
+(defun configure-c++ ()
+  (set-variable 'ycmd-server-command '("python2.7" "/Users/justin/src/ycmd/ycmd"))
+  (set-variable 'ycmd-extra-conf-whitelist '("~/src/*")))
+
 (defun configure-org-babel ()
   (setq org-src-fontify-natively t)
   (setq org-src-tab-acts-natively t)
@@ -244,6 +253,7 @@ layers configuration."
   (define-key evil-visual-state-map (kbd "TAB") 'evil-normal-state)
 
   ;; Lazy config
+  (configure-c++)
   (activate-linum)
   (extend-monokai)
   (sensible-splits)
@@ -298,5 +308,8 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(evil-search-highlight-persist-highlight-face ((t (:inherit region :background "dark slate gray"))))
- '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold)))))
+ '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "DarkOrange1" :weight bold))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "yellow green")))))
