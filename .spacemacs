@@ -22,6 +22,7 @@
             shell-default-height 30
             shell-default-position 'bottom)
      abclj
+     abc++
      ;; agda
      auto-completion
      better-defaults
@@ -32,7 +33,7 @@
              colors-enable-nyan-cat-progress-bar t)
      clojure
      emacs-lisp
-     ;; evil-monkey
+     evil-monkey
      extra-langs
      (git :variables git-gutter-use-fringe t)
      haskell
@@ -47,7 +48,7 @@
      syntax-checking
      themes-megapack
      version-control
-     ;; ycmd
+     ycmd
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
