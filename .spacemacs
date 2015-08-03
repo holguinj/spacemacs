@@ -18,12 +18,16 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (shell :variables
+     (
+      ;; fix leading 4m with `tic -o ~/.terminfo /usr/local/share/emacs/24.5/etc/e/eterm-color.ti`
+      ;; might need to change version number
+      shell :variables
+            shell-default-shell 'multi-term
+            shell-default-term-shell "/bin/zsh"
             shell-default-height 30
             shell-default-position 'bottom)
      abclj
      abc++
-     ;; agda
      auto-completion
      better-defaults
      (c-c++ :variables
@@ -37,11 +41,8 @@
      extra-langs
      (git :variables git-gutter-use-fringe t)
      haskell
-     ;; idris
-     ;; justin
      markdown
      (org :variables org-enable-github-support t)
-     ;; org-babel-clojure
      osx
      puppet
      semantic
