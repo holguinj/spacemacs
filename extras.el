@@ -21,7 +21,8 @@
 
 (defun configure-clojure ()
   (setq clojure-enable-fancify-symbols t)
-  (put 'prop/for-all 'clojure-backtracking-indent '(4 (2))))
+  ;; (put 'prop/for-all 'clojure-backtracking-indent '(4 (2)))
+  (add-hook 'cider-repl-mode-hook #'paredit-mode))
 
 ;; M-u to toggle transparency
 (defun toggle-transparency ()
