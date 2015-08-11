@@ -145,7 +145,11 @@ which require an initialization must be listed explicitly in the list.")
     (PUT 1)
     (POST 1)
     (DELETE 1)
-    (prop/for-all 1))
+    (prop/for-all 1)
+    (tc/quick-check 1))
+
+  (put-clojure-indent 'prop/for-all 1)
+  (put-clojure-indent 'tc/quick-check 1)
 
   ;; Use the :repl profile. If you want to add/remove Leiningen
   ;; profiles to/from CIDER, do it in the string below (in the concat expression)

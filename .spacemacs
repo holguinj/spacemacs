@@ -37,9 +37,11 @@
              colors-enable-nyan-cat-progress-bar t)
      clojure
      emacs-lisp
+     erc
      evil-monkey
      extra-langs
      (git :variables git-gutter-use-fringe t)
+     github
      haskell
      markdown
      (org :variables org-enable-github-support t)
